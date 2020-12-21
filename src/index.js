@@ -13,6 +13,8 @@ import App from './App'
 
 // 渲染页面
 ReactDOM.render(
-  <App/>,
+  <App />,
   document.getElementById('root')
 )
+
+

@@ -9,9 +9,7 @@ module.exports = override(
     }),
     addLessLoader({
         lessOptions: {
-            modifyVars:{
-                '@primary-color': '#1DA57A' 
-            },
+            modifyVars:{ }, // 指定颜色
             javascriptEnabled: true,
         },
     })

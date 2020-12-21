@@ -1,15 +1,32 @@
 
 import React, { Component } from 'react'
+
+// 引入路由
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
+// 引入UI 库
 import { Button } from 'antd'
+
+import Login from './pages/login/login.jsx'
+import Home from './pages/home/home.jsx'
+
 
 export default class App extends Component {
   render() {
     return (
-      <div>
-        <h1>hello React</h1>
-        <Button type="primary">蓝色-按钮</Button>
-        <Button type="danger">红色-按钮</Button>
-      </div>
+      <Router>
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     )
   }
 }
