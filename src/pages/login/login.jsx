@@ -11,7 +11,7 @@ import {
 } from '@ant-design/icons';
 
 // 引入图片
-import logo from './images/Logo.png'
+import logo from '../../assets/images/Logo.png'
 
 // const Item = Form.Item; // 自定义item 标签
 

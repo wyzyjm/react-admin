@@ -1,17 +1,20 @@
 
 import React, { Component } from 'react'
-
 // 引入路由
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from 'react-router-dom'
-// 引入UI 库
-import { Button } from 'antd'
 
+
+/**
+ * 引入组件
+ * 1. 登录
+ * 2. 主页
+ */
 import Login from './pages/login/login.jsx'
-import Home from './pages/home/home.jsx'
+import Admin from './pages/admin/admin.jsx'
 
 
 export default class App extends Component {
@@ -19,12 +22,10 @@ export default class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
+          {/* 登录页 */}
+          <Route path="/login" component={Login} />
+          {/* 主界面 */}
+          <Route path="/" component={Admin} />
         </Switch>
       </Router>
     )
